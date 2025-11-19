@@ -1,0 +1,13 @@
+configuration {
+  font: "JetBrainsMono Nerd Font 12";
+  kb-mode-complete: "";
+  kb-remove-to-eol: "";
+  kb-accept-entry: "Return";
+  kb-remove-char-back: "BackSpace,Shift+BackSpace";
+  kb-row-up: "Control+k";
+  kb-row-down: "Control+j";
+  kb-row-left: "Control+h";
+  kb-row-right: "Control+l";
+}
+
+@theme "Arc-Dark"
