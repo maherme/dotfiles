@@ -12,7 +12,6 @@ for i in /usr/lib/polkit-gnome-authentication-agent-1 \
 done;
 
 # Start xscreensaver daemon
-
 [ -x /usr/bin/xscreensaver ] && /usr/bin/xscreensaver > /dev/null &
 
 # Pass environment variables to systemd --user session (to fix bsc#1179237)
@@ -24,7 +23,7 @@ fi
 setxkbmap us -variant intl
 
 # Set screen resolution
-xrandr --output HDMI-1 --mode 1920x1080 &
+xrandr --output HDMI-1
 
 # Launch polybar
 bash ~/.config/polybar/launch.sh --cuts &

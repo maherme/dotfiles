@@ -1,5 +1,6 @@
 configuration {
   font: "JetBrainsMono Nerd Font 12";
+  dpi: 192;
   kb-mode-complete: "";
   kb-remove-to-eol: "";
   kb-accept-entry: "Return";
