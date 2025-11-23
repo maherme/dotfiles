@@ -4,7 +4,7 @@ ThemeDescription="Minimalistic, flat theme for IceWM, inspired and based on nord
 License="GPL"
 Look=flat
 
-TitleBarHeight=26
+TitleBarHeight=48
 TitleBarCentered=1
 TitleBarJustify=54
 RolloverButtonsSupported=1		# 0/1
@@ -18,17 +18,17 @@ TitleButtonsLeft="s"
 TitleButtonsRight="xmir"		# Rollup button displayed
 TitleButtonsSupported="sxmir"		# Rollup button displayed
 
-BorderSizeX=1
-BorderSizeY=1
+BorderSizeX=4
+BorderSizeY=4
 #CornerSizeX=22
 #CornerSizeY=22
-DlgBorderSizeX=1
-DlgBorderSizeY=1
+DlgBorderSizeX=4
+DlgBorderSizeY=4
 
-MenuIconSize=24					# Menu
-SmallIconSize=24 				# Taskbar & Titlebar. Taskbar height = height of linux.xpm. Titlebar height = TitleBarHeight in *.theme
-LargeIconSize=32				# Quickswitch window
-HugeIconSize=48					# ?  Cannot identify what it applies to
+MenuIconSize=32					# Menu
+SmallIconSize=48 				# Taskbar & Titlebar. Taskbar height = height of linux.xpm. Titlebar height = TitleBarHeight in *.theme
+LargeIconSize=64				# Quickswitch window
+HugeIconSize=96					# ?  Cannot identify what it applies to
 
 Gradients="taskbuttonactive.xpm taskbuttonminimized.xpm"
 
