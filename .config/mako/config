@@ -1,0 +1,4 @@
+include=~/.config/mako/themes/catppuccin-mocha-sapphire
+font=JetBrainsMono Nerd Font 16
+icon-path=/usr/share/icons/Papirus/
+width=600
