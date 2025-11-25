@@ -4,6 +4,7 @@ return {
     'moll/vim-bbye',
     'nvim-tree/nvim-web-devicons',
   },
+  after = "catppuccin",
   config = function()
     -- vim.opt.linespace = 8
 

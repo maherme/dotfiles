@@ -1,0 +1,61 @@
+include themes/catppuccin-mocha
+
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+
+default_border none
+
+input * {
+    xkb_layout us
+    xkb_variant intl
+}
+
+bindsym Control+Mod1+t exec wezterm
+bindsym Control+Mod1+b exec firefox
+bindsym Control+Mod1+w exec wofi
+bindsym Control+Mod1+f floating toggle
+bindsym Control+Mod1+h move  left
+bindsym Control+Mod1+l move  right
+bindsym Control+Mod1+j move  down
+bindsym Control+Mod1+k move  up
+bindsym Control+Mod1+q kill
+bindsym Control+Shift+h focus left
+bindsym Control+Shift+l focus right
+bindsym Control+Shift+j focus down
+bindsym Control+Shift+k focus up
+bindsym Control+Mod1+1 workspace 1
+bindsym Control+Mod1+2 workspace 2
+bindsym Control+Mod1+3 workspace 3
+bindsym Control+Mod1+4 workspace 4
+bindsym Control+Mod1+5 workspace 5
+bindsym Control+Mod1+6 workspace 6
+bindsym Control+Mod1+7 workspace 7
+bindsym Control+Mod1+8 workspace 8
+bindsym Control+Mod1+9 workspace 9
+bindsym Control+Mod1+0 workspace 10
+bindsym Control+Mod1+Shift+1 move container to workspace 1
+bindsym Control+Mod1+Shift+2 move container to workspace 2
+bindsym Control+Mod1+Shift+3 move container to workspace 3
+bindsym Control+Mod1+Shift+4 move container to workspace 4
+bindsym Control+Mod1+Shift+5 move container to workspace 5
+bindsym Control+Mod1+Shift+6 move container to workspace 6
+bindsym Control+Mod1+Shift+7 move container to workspace 7
+bindsym Control+Mod1+Shift+8 move container to workspace 8
+bindsym Control+Mod1+Shift+9 move container to workspace 9
+bindsym Control+Mod1+Shift+0 move container to workspace 10
+
+seat * xcursor_theme Bibata-Original-Classic 36
+font JetBrainsMono Nerd Font 24
+
+output DP-1 resolution 3840x2160 position 0 0 scale 1
+output DP-2 resolution 3840x2160 position 3840 0 scale 1
+
+workspace 1 output DP-1
+workspace 2 output DP-2
+
+bar {
+    swaybar_command waybar
+}
+
+exec swaymsg "workspace 1; exec wezterm; focus"

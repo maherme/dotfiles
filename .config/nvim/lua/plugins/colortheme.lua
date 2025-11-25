@@ -1,28 +1,36 @@
 return {
-    'shaunsingh/nord.nvim',
-    lazy = false,
-    priority = 1000,
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000, -- para que cargue antes que otras cosas
     config = function()
-        -- Example config in lua
-        vim.g.nord_contrast = true
-        vim.g.nord_borders = false
-        vim.g.nord_disable_background = true
-        vim.g.nord_italic = false
-        vim.g.nord_uniform_diff_background = true
-        vim.g.nord_bold = false
-
-        -- Load the colorscheme
-        require('nord').set()
-
-        --Toggle background transparency
-        local bg_transparent = true
-
-        local toggle_transparency = function()
-            bg_transparent = not bg_transparent
-            vim.g.nord_disable_background = bg_transparent
-            vim.cmd [[colorscheme nord]]
-        end
-
-        vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
-    end
+      require("catppuccin").setup({
+        flavour = "mocha", -- opciones: latte, frappe, macchiato, mocha
+        background = {
+          light = "latte",
+          dark = "mocha",
+        },
+        transparent_background = false,
+        term_colors = true,
+        styles = {
+          comments = { "italic" },
+          conditionals = { "italic" },
+        },
+        integrations = {
+          alpha = true,
+          treesitter = true,
+          neotree = true,
+          telescope = true,
+          gitsigns = true,
+          indent_blankline  = {
+            enabled = true,
+            scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
+            colored_indent_levels = false,
+          },
+        },
+      })
+      vim.cmd.colorscheme("catppuccin")
+    end,
+  },
 }
+

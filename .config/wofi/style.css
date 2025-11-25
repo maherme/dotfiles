@@ -1,0 +1,49 @@
+@import ".config/wofi/themes/mocha.css";
+
+window {
+    border-radius: 2rem 2rem 2rem 2rem;
+    border: 2px solid @lavender;
+    font-size: 32px;
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: rgba(24, 24, 37, 0.99);
+    color: @text;
+}
+
+#entry {
+    padding: 0.25em;
+    background-color: @mantle;
+    color: @text;
+}
+
+#entry:selected {
+    background-color: @surface0;
+    background: linear-gradient(90deg ,@surface0 ,@surface2);
+}
+
+#text:selected {
+    color: @blue;
+}
+
+#input {
+    border-radius: 2rem 2rem 0 0;
+    border: none;
+    border-top: 2px solid @lavander;
+    border-left: 2px solid @lavander;
+    border-right: 2px solid @lavander;
+    background-color: @mantle;
+    color: @text;
+    padding: 0.25em;
+}
+
+image {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#scroll {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+

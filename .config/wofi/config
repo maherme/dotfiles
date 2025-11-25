@@ -1,0 +1,11 @@
+mode=drun
+allow_images=true
+image_size=64
+width=50%
+key_up=Ctrl-k
+key_down=Ctrl-j
+key_left=Ctrl-h
+key_right=Ctrl-l
+key_pgup=Ctrl-p
+key_pgdn=Ctrl-n
+key_expand=Ctrl-e

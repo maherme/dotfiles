@@ -1,12 +1,16 @@
 local wezterm = require 'wezterm';
 return {
-  window_decorations = "RESIZE",
-  color_scheme = "Dracula",
+  window_decorations = "NONE",
+  color_scheme = "Catppuccin Mocha",
   font = wezterm.font("JetBrainsMono Nerd Font"),
-  font_size = 12.0,
+  font_size = 20.0,
+  window_frame = {
+    font = wezterm.font("JetBrainsMono Nerd Font"),
+    font_size = 20.0,
+  },
   leader = { key="b", mods="CTRL" },
   hide_tab_bar_if_only_one_tab = true,
-    keys = {
+  keys = {
     { key = "v", mods = "LEADER",       action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
     { key = "s", mods = "LEADER",       action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
     { key = "h", mods = "LEADER",       action=wezterm.action{ActivatePaneDirection="Left"}},
