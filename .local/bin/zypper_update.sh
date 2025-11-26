@@ -7,4 +7,4 @@ echo "Intro Password:"
 sudo zypper ref && sudo zypper dup
 
 # Verify dependencies
-sudo zypper ve && exit
+sudo zypper ve && makoctl dismiss -n $NOTIF_ID && exit

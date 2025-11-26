@@ -4,7 +4,7 @@ updates=$(zypper lu 2>/dev/null | grep --count '^v  | ')
 
     if [ -n "$updates" ] && [ "$updates" -gt 0 ]; then
         TEXT=" Pending Updates"
-        notify-send "System Updates" "$updates$TEXT" -i update-manager
+        notify-send "System Updates" "$updates$TEXT" -i update-manager -a zypper_refresh
     fi
 
 clear && exit

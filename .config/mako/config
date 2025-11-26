@@ -2,3 +2,6 @@ include=~/.config/mako/themes/catppuccin-mocha-sapphire
 font=JetBrainsMono Nerd Font 16
 icon-path=/usr/share/icons/Papirus/
 width=600
+
+[app-name=zypper_refresh]
+on-button-left=exec env NOTIF_ID="$id" wezterm start --always-new-process -- ~/.local/bin/zypper_update.sh
