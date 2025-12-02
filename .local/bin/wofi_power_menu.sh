@@ -37,6 +37,18 @@ confirm_action() {
     [[ "$response" == "Yes" ]]
 }
 
+notify_and_run() {
+    msg="$1"
+    shift
+    cmd="$@"
+
+    NOTIF_ID=$(notify-send -p "$msg") 
+    sleep 2
+    [ -n "$NOTIF_ID" ] && makoctl dismiss -n "$NOTIF_ID"
+
+    $cmd
+}
+
 # Open Wofi menu
 open_menu() {
     options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
@@ -47,16 +59,12 @@ open_menu() {
     case $chosen in
         "$shutdown")
             if confirm_action; then
-                notify-send "System is shutting down..."
-                sleep 2
-                systemctl poweroff
+                notify_and_run "System is shutting down..." systemctl poweroff
             fi
             ;;
         "$reboot")
             if confirm_action; then
-                notify-send "Rebooting system..."
-                sleep 2
-                systemctl reboot
+                notify_and_run "Rebooting system..." systemctl reboot
             fi
             ;;
         "$lock")
@@ -64,16 +72,12 @@ open_menu() {
             ;;
         "$suspend")
             if confirm_action; then
-                notify-send "Suspending system..."
-                sleep 2
-                systemctl suspend
+                notify_and_run "Suspending system..." systemctl suspend
             fi
             ;;
         "$logout")
             if confirm_action; then
-                notify-send "Logging out..."
-                sleep 2
-                swaymsg exit
+                notify_and_run "Logging out..." swaymsg exit
             fi
             ;;
     esac
