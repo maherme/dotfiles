@@ -14,6 +14,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/scale",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -38,6 +39,11 @@
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "custom/scale": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "monitor_scale_toggle.sh"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -118,5 +124,5 @@
         "format" : "⏻ ",
 	"tooltip": false,
         "on-click": "wofi_power_menu.sh"
-    }
+    } 
 }

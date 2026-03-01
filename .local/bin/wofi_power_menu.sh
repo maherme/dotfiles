@@ -10,8 +10,8 @@ CONFIG="${WOFI_CONFIG:-$HOME/.config/wofi/config}"
 STYLE="${WOFI_STYLE:-$HOME/.config/wofi/style.css}"
 
 # Wofi commands
-wofi_command="wofi --show dmenu --conf ${CONFIG} --style ${STYLE} --width=600 --height=325 --hide-search"
-wofi_confirm="wofi --show dmenu --conf ${CONFIG} --style ${STYLE} --width=600 --height=150 --hide-search"
+wofi_command="wofi --show dmenu --conf ${CONFIG} --style ${STYLE} --width=600 --lines 6 --hide-search"
+wofi_confirm="wofi --show dmenu --conf ${CONFIG} --style ${STYLE} --width=600 --lines 3 --hide-search"
 
 # Get system uptime
 uptime=$(uptime -p | cut -d' ' -f2-)

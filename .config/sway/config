@@ -63,6 +63,9 @@ font JetBrainsMono Nerd Font 24
     # Start power menu
     bindsym $mod+Shift+Escape exec wofi_power_menu.sh
 
+    # Start window switcher
+    bindsym $mod+Tab exec wofi_window_switcher.sh
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -198,5 +201,7 @@ bar {
 # Starting Notification Sever
 #
 exec mako
+
+exec_always dbus-update-activation-environment --systemd --all
 
 exec swaymsg "workspace 1; exec wezterm; focus"
