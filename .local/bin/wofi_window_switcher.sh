@@ -1,8 +1,8 @@
 #!/bin/bash
 
 windows=$(swaymsg -t get_tree | jq -r '
-  .. | select(.type?) 
-  | select(.type=="con" and .app_id!=null)
+  recurse(.nodes[]?, .floating_nodes[]?)
+  | select(.type=="con" and .name!=null)
   | "\(.name)"
 ')
 
