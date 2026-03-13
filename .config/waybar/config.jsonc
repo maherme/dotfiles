@@ -18,6 +18,7 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
+        "custom/mx_ergo",
         "cpu",
         "temperature#cpu",
         "memory",
@@ -44,6 +45,12 @@
         "format": " ",
         "tooltip": false,
         "on-click": "monitor_scale_toggle.sh"
+    },
+    "custom/mx_ergo": {
+        "exec": "mx_ergo_battery.sh",
+        "interval": 60,
+        "format": "󰍽 {}%",
+        "return-type": "text"
     },
     "idle_inhibitor": {
         "format": "{icon}",
